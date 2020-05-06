@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header{
+    /*border: 2px solid red;*/
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    /*top: 0;*/
+}
+
+.sesion{
+    /*border: 2px solid blue;*/
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1px 40px;
+    background: rgb(23, 70, 148);
+}
+.sesion a{
+    text-decoration: none;
+    /*border: 1px solid yellow;*/
+    color: white;
+    padding: 4px 15px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+.sesion .a1{
+   border-right: 0.5px solid white; 
+}
+.sesion .a2{
+    border-left: 0.5px solid white;
+}
+.sesion a:hover{
+    background: white;
+    color: rgb(23, 70, 148);
+    transition: all 0.3s;
+}
+
+
+.logos{
+    /*border: 2px solid green;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background: rgba(255, 255, 255,0.8);
+}
+.logos .zona1{
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logos .zona1 .partir1{
+    /*border: 1px solid darkorange;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logos .zona1 .partir1 h1{
+    font-size: 25px;
+    font-weight: lighter;
+}
+.logos .zona1 .partir1 .partir2{
+    /*border: 1px solid purple;*/
+    text-align: center;
+}
+.logos .zona1 .partir1 .partir2 img{
+    width: 30px;
+}
+.logos .zona1 .partir1 .partir2 h3{
+    font-size: 12px;
+    font-weight: lighter;
+    background: rgb(23, 70, 148);
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.logos .zona1 .textoh3{
+    /*border: 1px solid red;*/
+    font-size: 12px;
+    font-weight: lighter;
+    margin-top: 8px;
+}
+.logos .zona2{
+    /*border: 1px solid yellow;*/
+    text-align: center;
+}
+.logos .zona2 img{
+    width: 80px;
+}
+.logos .zona2 h3{
+    font-size: 12px;
+    font-weight: lighter;
+}
+.logos .zona2 h1{
+    font-size: 20px;
+    font-weight: lighter;
+}
+.menu{
+    display: none;
+    /*border: 1px solid red;*/
+    cursor: pointer;
+}
+.menu div{
+    width: 24px;
+    height: 3px;
+    background: rgb(23, 70, 148);
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+nav{
+    /*border: 2px solid black;*/
+    background: rgba(23, 70, 148,0.8);
+}
+nav ul{
+    /*border: 2px solid blue;*/
+    list-style: none;
+    text-align: center;
+    /*padding: 5px 0px;*/
+}
+nav ul li{
+    /*border: 2px solid green;*/
+    display: inline-block;
+    margin: 0px 13px 0px 13px;
+
+}
+nav ul li a{
+    /*border: 2px solid yellow;*/
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    font-size: 12px;
+    color: white;
+    transition: all 0.3s;
+}
+nav ul li a img{
+    width: 28px;
+    margin-bottom: 5px;
+}
+nav ul li a:hover{
+    background: white;
+    color: black;
+    transition: all 0.3s;
+}
+
+/*.fondo{
+    background-image: url('img/fondo3.jpg');
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}*/
+
+.opciones{
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.misopciones{
+    border: 1px solid blue;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.misopciones img{
+    border: 1px solid green;
+}
+.misopciones h3{
+    border: 1px solid purple;
+}
+
+@media screen and (max-width: 700px){
+    nav{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        transform: translateX(-100%);    
+        transition: transform 0.5s ease-in;
+    }
+    nav ul{
+        
+    }
+    nav ul li{
+        display: block;
+        margin: 0;
+    }
+    nav ul li a{
+        border-bottom: 1px dotted white;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 15px 15px;
+
+    }
+    nav ul li a img{
+        margin-bottom: 0px;
+        margin-right: 10px;
+    }
+    .clasenavaparecer{
+        transform: translateX(0%);
+    }
+
+    .logos{
+        padding: 10px 40px;
+    }
+    .logos .zona2{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+    }
+    .cambio .linea1{
+        transform: rotate(-45deg) translate(-5px,5px);
+    }
+    .cambio .linea2{
+        opacity: 0;
+    }
+    .cambio .linea3{
+        transform: rotate(45deg) translate(-5px,-5px);
+    }
+
+
+}
